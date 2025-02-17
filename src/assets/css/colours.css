@@ -1,0 +1,19 @@
+:root {
+  /* Background colours */
+  --bg-element: #ffffff;
+  --bg-content-background: #ffffff;
+  --bg-secondary-hover: #f2f5f7;
+  --bg-secondary-active: #e6ecef;
+
+  /* Text colours */
+  --text-placeholder: #8e9aa5;
+  --text: #20374b;
+  --text-light: #5a6d80;
+  --text-primary: #6b46ef;
+
+  /* Border colours */
+  --border-medium: #e4e5e8;
+
+  /* Primary colours */
+  --primary-200: #f4f1fd;
+}

@@ -1,0 +1,12 @@
+:root {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+
+  /* Setup Roboto font */
+  font-family: 'Roboto', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
