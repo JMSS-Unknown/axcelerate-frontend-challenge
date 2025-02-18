@@ -14,13 +14,15 @@ export type SectionHeaderPropType = {
    */
   expanded?: boolean
   /**
-   * Called with the opposite value of `expanded` when the user clicks the header
+   * Called with the opposite value of `expanded` when the user clicks the
+   * header
    */
   setExpanded: Dispatch<SetStateAction<boolean>>
 }
 
 /**
- * A header that has a chevron indicating if it is expanded or collapsed. It does not manage rendering children based on the expanded state.
+ * A header that has a chevron indicating if it is expanded or collapsed.
+ * It does not manage rendering children based on the expanded state.
  */
 const SectionHeader = ({
   text,
