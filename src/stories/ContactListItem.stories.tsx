@@ -25,4 +25,21 @@ export const WithEmail: Story = {
   },
 }
 
+export const EnabledWithoutEmail: Story = {
+  args: {
+    imageSrc: thumbnailAstract,
+    name: 'Jane Doe',
+    enabled: true,
+  },
+}
+
+export const EnabledWithEmail: Story = {
+  args: {
+    imageSrc: thumbnailAstract,
+    name: 'Jane Doe',
+    email: 'jane@hotmail.com',
+    enabled: true,
+  },
+}
+
 export default meta

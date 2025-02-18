@@ -1,3 +1,4 @@
+import { joinClassNames } from 'utils/helpers'
 import classes from './contact-list-item.module.css'
 
 export type ContactListItemPropType = {
@@ -13,6 +14,10 @@ export type ContactListItemPropType = {
    * The email address of the contact
    */
   email?: string
+  /**
+   * Whether the contact is enabled, filling the background with a primary hue
+   */
+  enabled?: boolean
 }
 
 /**
@@ -22,9 +27,15 @@ const ContactListItem = ({
   imageSrc,
   name,
   email,
+  enabled,
 }: ContactListItemPropType) => {
   return (
-    <button className={classes.container}>
+    <button
+      className={joinClassNames(
+        classes.container,
+        enabled ? classes.enabled : classes.interactive
+      )}
+    >
       <img src={imageSrc} alt="Contact Profile Picture" />
       <div>
         <div className={classes.name}>{name}</div>
