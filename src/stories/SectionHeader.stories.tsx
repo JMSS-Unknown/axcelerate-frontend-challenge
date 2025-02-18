@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import SectionHeader from '.'
+import SectionHeader from 'components/SectionHeader'
 
 type Story = StoryObj<typeof SectionHeader>
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import Section from '.'
+import Section from 'components/Section'
 
 import thumbnailAbstract from 'assets/images/thumbnail_abstract.png'
 

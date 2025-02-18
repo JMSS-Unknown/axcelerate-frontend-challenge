@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import SearchField from '.'
+import SearchField from 'components/SearchField'
 
 type Story = StoryObj<typeof SearchField>
 

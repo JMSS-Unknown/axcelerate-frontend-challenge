@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import SearchableList from '.'
+import SearchableList from 'components/SearchableList'
 
 import thumbnail1 from 'assets/images/thumbnail_person_1.png'
 import thumbnail2 from 'assets/images/thumbnail_person_2.png'

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import ContactListItem from '.'
+import ContactListItem from 'components/ContactListItem'
 
 import thumbnailAstract from 'assets/images/thumbnail_abstract.png'
 
