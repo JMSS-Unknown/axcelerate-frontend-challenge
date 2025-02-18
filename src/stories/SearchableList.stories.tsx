@@ -28,7 +28,7 @@ export const WithoutEmail: Story = {
           { imageSrc: thumbnail1, name: 'Dianne Russell' },
           { imageSrc: thumbnail2, name: 'Ronald Richards' },
           { imageSrc: thumbnail3, name: 'Arlene McCoy' },
-          { imageSrc: thumbnail4, name: 'Kathryn Murphy' },
+          { imageSrc: thumbnail4, name: 'Kathryn Murphy', enabled: true },
           { imageSrc: thumbnail5, name: 'Savannah Nyugen' },
           { imageSrc: thumbnail6, name: 'Albert Flores' },
         ],
@@ -71,6 +71,7 @@ export const WithEmail: Story = {
             imageSrc: thumbnail4,
             name: 'Kathryn Murphy',
             email: 'jane@hotmail.com',
+            enabled: true,
           },
           {
             imageSrc: thumbnail5,
