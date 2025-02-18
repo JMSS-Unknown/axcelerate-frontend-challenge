@@ -1,5 +1,5 @@
 import 'assets/css/colours.css'
-import 'assets/css/app.css'
+import 'assets/css/styles.css'
 import SearchableList from 'components/SearchableList'
 
 import classes from './app.module.css'
