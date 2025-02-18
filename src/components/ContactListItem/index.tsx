@@ -1,6 +1,11 @@
 import { joinClassNames } from 'utils/helpers'
 import classes from './contact-list-item.module.css'
 
+export type ContactDetails = {
+  name: string
+  email?: string
+}
+
 export type ContactListItemPropType = {
   /**
    * A path to the image representing the contact
@@ -18,6 +23,12 @@ export type ContactListItemPropType = {
    * Whether the contact is enabled, filling the background with a primary hue
    */
   enabled?: boolean
+  /**
+   * Called with the name and email of the contact list item that was clicked
+   *
+   * @param contact The name and email of the clicked contact
+   */
+  onClick?: (contact: ContactDetails) => void
 }
 
 /**
@@ -28,6 +39,7 @@ const ContactListItem = ({
   name,
   email,
   enabled,
+  onClick,
 }: ContactListItemPropType) => {
   return (
     <button
@@ -35,6 +47,7 @@ const ContactListItem = ({
         classes.container,
         enabled ? classes.enabled : classes.interactive
       )}
+      onClick={() => onClick?.({ name, email })}
     >
       <img src={imageSrc} alt="Contact Profile Picture" />
       <div>

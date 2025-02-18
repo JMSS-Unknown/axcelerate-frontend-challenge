@@ -1,4 +1,5 @@
 import ContactListItem, {
+  ContactDetails,
   ContactListItemPropType,
 } from 'components/ContactListItem'
 import SectionHeader from 'components/SectionHeader'
@@ -15,13 +16,19 @@ export type SectionPropType = {
   /**
    * The list of contacts to display
    */
-  contacts: ContactListItemPropType[]
+  contacts: Exclude<ContactListItemPropType, 'onClick'>[]
+  /**
+   * Called with the name and email of the contact list item that was clicked
+   *
+   * @param contact The name and email of the clicked contact
+   */
+  onClick?: (contact: ContactDetails) => void
 }
 
 /**
  * Display a collapsible header containing a list of contacts
  */
-const Section = ({ header, contacts }: SectionPropType) => {
+const Section = ({ header, contacts, onClick }: SectionPropType) => {
   const [expanded, setExpanded] = useState(true)
 
   return (
@@ -36,7 +43,7 @@ const Section = ({ header, contacts }: SectionPropType) => {
       {expanded && contacts.length > 0 && (
         <div className={classes.contacts}>
           {contacts.map((contact, i) => (
-            <ContactListItem key={i} {...contact} />
+            <ContactListItem key={i} {...contact} onClick={onClick} />
           ))}
         </div>
       )}
