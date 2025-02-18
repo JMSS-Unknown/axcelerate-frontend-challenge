@@ -23,7 +23,8 @@
     "noUncheckedSideEffectImports": true,
 
     /* Other */
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "types": ["vitest/globals"]
   },
   "include": ["src", "setupTests.ts"]
 }
