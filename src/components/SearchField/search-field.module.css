@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  background-color: var(--bg-element);
+  height: 48px;
+}
+
+.container > input {
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  height: 20px;
+  flex-grow: 1;
+  font: inherit;
+  padding: 0px;
+}
+
+.container > input:focus {
+  outline: none;
+}
+
+.container > input::placeholder {
+  color: var(--text-placeholder);
+}
