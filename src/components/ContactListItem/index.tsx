@@ -1,5 +1,6 @@
 import { joinClassNames } from 'utils/helpers'
 import classes from './contact-list-item.module.css'
+import { PROFILE_IMAGE_SIZE } from './constants'
 
 export type ContactDetails = {
   name: string
@@ -49,7 +50,12 @@ const ContactListItem = ({
       )}
       onClick={() => onClick?.({ name, email })}
     >
-      <img src={imageSrc} alt="Contact Profile Picture" />
+      <img
+        src={imageSrc}
+        alt="Contact Profile Picture"
+        width={PROFILE_IMAGE_SIZE}
+        height={PROFILE_IMAGE_SIZE}
+      />
       <div>
         <div className={classes.name}>{name}</div>
         {email && <div className={classes.email}>{email}</div>}
