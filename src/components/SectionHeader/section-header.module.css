@@ -12,6 +12,7 @@
   border-style: solid;
   font: inherit;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .container:hover {
