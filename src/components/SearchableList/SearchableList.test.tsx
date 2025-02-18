@@ -176,3 +176,74 @@ test('Searching does not show matches in collapsed sections', async () => {
   expect(screen.getByText('Ronald Richards')).toBeInTheDocument()
   expect(screen.queryByText('Ralph Edwards')).not.toBeInTheDocument()
 })
+
+test('Searching only filters based on name and not email', async () => {
+  render(
+    <SearchableList
+      sections={[
+        {
+          contacts: [
+            {
+              imageSrc: thumbnailAbstract,
+              name: 'Ronald',
+              email: 'test@gmail.com',
+            },
+          ],
+        },
+      ]}
+    />
+  )
+
+  await userEvent.type(screen.getByRole('textbox'), 'test')
+
+  expect(screen.queryByText('Ronald')).not.toBeInTheDocument()
+})
+
+test('onClick returns selected contact', async () => {
+  const onClickSpy = vi.fn()
+  render(
+    <SearchableList
+      sections={[
+        {
+          header: 'Attended',
+          contacts: [
+            { imageSrc: thumbnailAbstract, name: 'Dianne Russell' },
+            { imageSrc: thumbnailAbstract, name: 'Ronald Richards' },
+            { imageSrc: thumbnailAbstract, name: 'Arlene McCoy' },
+            { imageSrc: thumbnailAbstract, name: 'Kathryn Murphy' },
+            { imageSrc: thumbnailAbstract, name: 'Savannah Nyugen' },
+            {
+              imageSrc: thumbnailAbstract,
+              name: 'Albert Flores',
+              email: 'albert@gmail.com',
+            },
+          ],
+        },
+        {
+          header: 'Absent',
+          contacts: [
+            { imageSrc: thumbnailAbstract, name: 'Jenny Wilson' },
+            { imageSrc: thumbnailAbstract, name: 'Wade Warren' },
+            { imageSrc: thumbnailAbstract, name: 'Bessie Cooper' },
+            { imageSrc: thumbnailAbstract, name: 'Ralph Edwards' },
+          ],
+        },
+      ]}
+      onClick={onClickSpy}
+    />
+  )
+
+  await userEvent.click(screen.getByText('Wade Warren'))
+  expect(onClickSpy).toBeCalledTimes(1)
+  expect(onClickSpy).toHaveBeenLastCalledWith({
+    name: 'Wade Warren',
+    email: undefined,
+  })
+
+  await userEvent.click(screen.getByText('Albert Flores'))
+  expect(onClickSpy).toBeCalledTimes(2)
+  expect(onClickSpy).toHaveBeenLastCalledWith({
+    name: 'Albert Flores',
+    email: 'albert@gmail.com',
+  })
+})
