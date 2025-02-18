@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  text-align: inherit;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: var(--bg-element);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  font: inherit;
+}
+
+.container:hover {
+  background-color: var(--bg-secondary-hover);
+}
+
+.container:active {
+  background-color: var(--bg-secondary-active);
+}
+
+.name {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.email {
+  color: var(--text-light);
+  font-size: 13px;
+  line-height: 16px;
+}
