@@ -24,6 +24,11 @@
   background-color: var(--primary-200);
 }
 
+/* Only change text colour if it is enabled and doesn't have an email */
+.enabled .name:not(:has(~ .email)) {
+  color: var(--text-primary);
+}
+
 .name {
   color: var(--text);
   font-weight: 500;
