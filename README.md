@@ -2,6 +2,8 @@
 
 This repository contains the code for the aXcelerate frontend challenge, which involves implementing a searchable dropdown list containing contacts.
 
+![Searchable List in Storybook](./documentation/searchable_list_storybook.png)
+
 ## Setup
 
 1. Install [node](https://nodejs.org/en) if not already available. This repository was tested with version v22.14.0
