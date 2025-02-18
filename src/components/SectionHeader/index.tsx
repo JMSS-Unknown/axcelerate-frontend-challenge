@@ -37,7 +37,7 @@ const SectionHeader = ({
       <div
         className={joinClassNames(
           classes.chevron,
-          expanded ? classes.collapsed : classes.expanded
+          expanded ? classes.expanded : classes.collapsed
         )}
       >
         <ChevronRight />
