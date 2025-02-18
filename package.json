@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint-prettier": "prettier --check .",
+    "lint-tsc": "tsc -p tsconfig.json --noEmit",
+    "lint-eslint": "eslint .",
+    "lint": "npm run lint-prettier && npm run lint-tsc && npm run lint-eslint",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
