@@ -1,0 +1,7 @@
+.container {
+  background-color: var(--bg-content);
+}
+
+.contacts {
+  padding: 12px 8px;
+}
