@@ -34,7 +34,7 @@ type SearchableListPropType = {
  * expanded sections whose name begin with the entered search term. This is
  * case sensitive.
  *
- * Any contacts marked as active will be highlighted in purple. Additionally
+ * Any contacts marked as enabled will be highlighted in purple. Additionally
  * provide an onClick handler to be able to register a callback when the user
  * clicks on a specific contact list item.
  */
