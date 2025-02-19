@@ -114,4 +114,97 @@ export const WithEmail: Story = {
   },
 }
 
+export const NoEnabled: Story = {
+  args: {
+    sections: [
+      {
+        header: 'Attended',
+        contacts: [
+          {
+            imageSrc: thumbnail1,
+            name: 'Dianne Russell',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail2,
+            name: 'Ronald Richards',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail3,
+            name: 'Arlene McCoy',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail4,
+            name: 'Kathryn Murphy',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail5,
+            name: 'Savannah Nyugen',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail6,
+            name: 'Albert Flores',
+            email: 'jane@hotmail.com',
+          },
+        ],
+      },
+      {
+        header: 'Absent',
+        contacts: [
+          {
+            imageSrc: thumbnail7,
+            name: 'Jenny Wilson',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail8,
+            name: 'Wade Warren',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail9,
+            name: 'Bessie Cooper',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail10,
+            name: 'Ralph Edwards',
+            email: 'jane@hotmail.com',
+          },
+        ],
+      },
+    ],
+  },
+}
+
+export const NoHeader: Story = {
+  args: {
+    sections: [
+      {
+        contacts: [
+          {
+            imageSrc: thumbnail1,
+            name: 'Dianne Russell',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail2,
+            name: 'Ronald Richards',
+            email: 'jane@hotmail.com',
+          },
+          {
+            imageSrc: thumbnail3,
+            name: 'Arlene McCoy',
+            email: 'jane@hotmail.com',
+          },
+        ],
+      },
+    ],
+  },
+}
+
 export default meta
