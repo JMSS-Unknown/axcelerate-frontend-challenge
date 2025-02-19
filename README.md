@@ -7,7 +7,7 @@ _Story of Searchable List_
 
 ## Setup
 
-1. Install [node](https://nodejs.org/en) if not already available. This repository was tested with version v22.14.0
+1. Install [node](https://nodejs.org/en) if not already available. This repository was tested with version v22.14.0 on Windows 10.
 2. Clone the repository `git clone https://github.com/JMSS-Unknown/axcelerate-frontend-challenge.git`
 3. Navigate into the project `cd axcelerate-frontend-challenge`
 4. Install dependencies `npm i`
