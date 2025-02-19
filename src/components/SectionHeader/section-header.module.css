@@ -7,12 +7,28 @@
   padding: 0px 8px 0px 16px;
   color: var(--text-light);
   background-color: var(--bg-element);
-  border-width: 1px 0px;
+  border-width: 1px 0px 0px 0px;
   border-color: var(--border-medium);
   border-style: solid;
   font: inherit;
   font-weight: 500;
   cursor: pointer;
+}
+
+.container.expanded {
+  /*
+   * Only add bottom border when expanded to avoid double border when two
+   * sections are collapsed in sequence
+   */
+  border-bottom-width: 1px;
+}
+
+.container.collapsed {
+  /*
+   * Introduce padding that takes bottom border space to avoid content
+   * shifting
+   */
+  padding-bottom: 1px;
 }
 
 .container:hover {
@@ -29,10 +45,10 @@
   line-height: 0px;
 }
 
-.collapsed {
+.collapsed > .chevron {
   transform: rotate(0deg);
 }
 
-.expanded {
+.expanded > .chevron {
   transform: rotate(90deg);
 }

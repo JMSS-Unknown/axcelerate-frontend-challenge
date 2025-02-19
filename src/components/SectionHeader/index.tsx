@@ -32,14 +32,15 @@ const SectionHeader = ({
   const onClick = () => setExpanded((expanded) => !expanded)
 
   return (
-    <button className={classes.container} onClick={onClick}>
+    <button
+      className={joinClassNames(
+        classes.container,
+        expanded ? classes.expanded : classes.collapsed
+      )}
+      onClick={onClick}
+    >
       <span>{text}</span>
-      <div
-        className={joinClassNames(
-          classes.chevron,
-          expanded ? classes.expanded : classes.collapsed
-        )}
-      >
+      <div className={classes.chevron}>
         <ChevronRight />
       </div>
     </button>
